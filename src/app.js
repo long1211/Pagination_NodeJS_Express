@@ -2,7 +2,6 @@ require('dotenv').config()
 const path = require("path")
 const express = require("express")
 const app = express()
-const bodyParser = require('body-parser');
 const mongoose = require("mongoose")
 const port = 3333
 
@@ -23,9 +22,6 @@ mongoose.connect(process.env.DATABASE_URL,
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// middlewares
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 // routes
 app.use(indexRoutes);
