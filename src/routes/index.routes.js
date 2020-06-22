@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-var faker = require('faker');
+const faker = require('faker');
 const Product = require("../models/product.model")
 
 
