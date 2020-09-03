@@ -10,7 +10,7 @@ router.get('/', (req, res, next)=>{
   let page = req.params.page || 1; 
 
   Product
-    .find() // find tất cả các data
+    .find() // find tất cả các sản phẩm 
     .skip((perPage * page) - perPage) // Trong page đầu tiên sẽ bỏ qua giá trị là 0
     .limit(perPage)
     .exec((err, products) => {
